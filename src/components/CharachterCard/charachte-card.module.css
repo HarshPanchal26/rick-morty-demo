@@ -41,11 +41,30 @@
 .text-larger{
     margin: 0;
     font-size: larger;
+    color: wheat;
 }
 
 .text-medium{
     margin: 0;
     font-size: medium;
+}
+
+.text-x-larger{
+    font-size: xx-large;
+    margin: 0;
+    color: wheat;
+}
+
+.text-alive{
+    color: green;
+    font-size: large;
+    margin: 0;
+}
+
+.text-dead{
+    color: red;
+    font-size: large;
+    margin: 0;
 }
 
 /* Small Mobile (up to 480px) */
@@ -56,6 +75,11 @@
         gap: 2px;
         width: 100%;
         min-height: 200px;
+    }
+    .text-x-larger{
+        font-size: x-large;
+        margin: 0;
+        color: wheat;
     }
   }
   
@@ -68,6 +92,16 @@
         width: 100%;
         min-height: 100px;
     }
+    .text-x-larger{
+        font-size: x-large;
+        margin: 0;
+        color: wheat;
+    }
+    .text-larger{
+        margin: 0;
+        font-size: small;
+        color: wheat;
+    }
   }
   
   /* Tablet Portrait (768px to 1024px) */
@@ -78,6 +112,11 @@
         gap: 2px;
         width: 43%;
         min-height: 200px;
+    }
+    .text-larger{
+        margin: 0;
+        font-size: small;
+        color: wheat;
     }
   }
   

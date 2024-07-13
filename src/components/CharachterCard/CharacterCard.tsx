@@ -2,7 +2,7 @@ import { TypeCharacters } from '../../utils/type'
 import Style from './charachte-card.module.css'
 import { NavLink} from 'react-router-dom';
 
-export default function CharachterCard({charachter} : {charachter :TypeCharacters}) {
+export default function CharacterCard({charachter} : {charachter :TypeCharacters}) {
 
 
   return (
@@ -12,8 +12,7 @@ export default function CharachterCard({charachter} : {charachter :TypeCharacter
         </div>
         <div className={Style.info}>
             <div>
-                <p className={Style['text-larger']}>{charachter.name}</p> 
-                <p className={Style['text-smaller']}>{charachter.status} - {charachter.type}</p> 
+                <p className={Style['text-x-larger']}>{charachter.name}</p> 
             </div>    
             <div>
                 <p className={Style['text-smaller']}>location</p> 
@@ -22,6 +21,10 @@ export default function CharachterCard({charachter} : {charachter :TypeCharacter
             <div>
                 <p className={Style['text-smaller']}>First Seenn in</p> 
                 <p className={Style['text-larger']}>{charachter.origin.name}</p> 
+            </div>
+            <div>
+                <p className={Style['text-smaller']}>Status / Type</p> 
+                <p className={charachter.status === 'Dead' ? Style['text-dead'] : Style['text-alive']}>{charachter.status} <span className={Style['text-larger']}>/ {charachter.type ? charachter.type : '-' }</span></p> 
             </div>    
         </div>
     </NavLink>

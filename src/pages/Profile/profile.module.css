@@ -11,7 +11,7 @@
 
 .profile{
     height: auto;     
-    max-height: 300px;
+    max-height: 350px;
     padding: 0.3rem;
     display: flex;
     flex-direction: row;
@@ -39,7 +39,7 @@
 }
 
 .text-block{
-    margin: 0.4rem 1rem;
+    margin: 0.7rem 1rem;
 }
 
 .text-x-larger{
@@ -50,6 +50,7 @@
 .text-larger{
     font-size: larger;
     margin: 0;
+    color: wheat;
 }
 
 .text-medium{
@@ -66,7 +67,8 @@
 .text-smaller{
     font-size: smaller;
     margin: 0;
-    color: black;
+    color: white;
+
 }
 
 .profile-meta{
@@ -122,6 +124,18 @@
     height: 100px;
 }
 
+.text-alive{
+    color: green;
+    font-size: large;
+    margin: 0;
+}
+
+.text-dead{
+    color: red;
+    font-size: large;
+    margin: 0;
+}
+
 
 /* Small Mobile (up to 480px) */
 @media only screen and (max-width: 480px) {
@@ -168,7 +182,7 @@
     .text-smaller{
         font-size: x-small;
         margin: 0;
-        color: black;
+        color: white;
     }
     .episode-container{
         padding: 0.5rem;
@@ -242,7 +256,7 @@
     .text-smaller{
         font-size: x-small;
         margin: 0;
-        color: black;
+        color: white;
     }
     .episode-container{
         padding: 0.5rem;

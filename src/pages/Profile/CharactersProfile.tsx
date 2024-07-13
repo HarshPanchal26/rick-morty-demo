@@ -1,3 +1,7 @@
+/**
+ * Component for Charcter profiles.
+ */
+
 import Style from './profile.module.css'
 import { useEffect, useState } from 'react'
 import { NavLink, useParams , useNavigate  } from 'react-router-dom';
@@ -24,6 +28,10 @@ export default function CharactersProfile() {
 
   const [characterObj, setcharacterObj] = useState<StateTyepForCharacterObj>({ character: null, isFetchingCharcter: true, isEpisodeBeenFetching: true, isLocationBeenFetching: true });
 
+  /**
+   * Function responsible for fetching charcter data.
+   * @param charId charcter unique Id.
+   */
   const fetchProfile = async (charId: number) => {
     try {
       const charDetails = await ServicesForProfile.getProfile(charId);
@@ -37,6 +45,10 @@ export default function CharactersProfile() {
     }
   }
 
+  /**
+   * Function for fetch locations related to charcters.
+   * @param location Basic location URL been provided from rick-morty api.
+   */
   const fetchLocation = async (location: string) => {
     if (characterObj.character) {
       try {
@@ -55,12 +67,14 @@ export default function CharactersProfile() {
       }
     }
   }
-
+  /**
+   * Function for fetch episodes in charcters has been part of.
+   * @param episodesStr Array of episodes strings/URL been provided from rick-morty api.
+   */
   const fetchEpisodes = async (episodesStr: Array<string>) => {
 
     try {
       if (characterObj.character) {
-        console.log("Calling Episode")
         const EpisodesMetaForCharacter = await ServicesForProfile.fetchEpisodes(episodesStr, characterObj.character.id);
         const updatedCharData: TypeCharacters = {
           ...characterObj.character,
@@ -86,8 +100,6 @@ export default function CharactersProfile() {
 
     if (characterObj.character && !characterObj.character.episodeMeta)
       fetchEpisodes(characterObj.character.episode)
-
-    console.log("Check this", (characterObj.character && characterObj.character.episodeMeta))
 
   }, [characterObj.character])
 
@@ -120,20 +132,24 @@ export default function CharactersProfile() {
             <div className={Style.info}>
               <div className={Style['text-block']}>
                 <h1 className={Style['text-xx-larger']}>{characterObj.character?.name}</h1>
-                <p className={Style['text-larger']}>{characterObj.character?.status} - {characterObj.character?.species}</p>
+                {/* <p className={Style['text-larger']}>{characterObj.character?.status} - {characterObj.character?.species}</p> */}
               </div>
               <div className={Style['text-block']}>
                 <p className={Style['text-smaller']}>location</p>
-                <p className={Style['text-x-larger']}>{characterObj.character?.location.name}</p>
+                <p className={Style['text-larger']}>{characterObj.character?.location.name}</p>
               </div>
               <div className={Style['text-block']}>
                 <p className={Style['text-smaller']}>First Seenn in</p>
-                <p className={Style['text-x-larger']}>{characterObj.character?.origin.name}</p>
+                <p className={Style['text-larger']}>{characterObj.character?.origin.name}</p>
               </div>
               <div className={Style['text-block']}>
                 <p className={Style['text-smaller']}>Dimension / TotalResidents</p>
                 <p className={Style['text-larger']}>{characterObj.character?.locationMeta?.dimension} / {characterObj.character?.locationMeta?.totalResidents}</p>
               </div>
+              <div className={Style['text-block']}>
+                <p className={Style['text-smaller']}>Status / Type</p> 
+                <p className={characterObj.character?.status === 'Dead' ? Style['text-dead'] : Style['text-alive']}>{characterObj.character?.status} <span className={Style['text-larger']}>/ {characterObj.character?.type ? characterObj.character?.type : '-' }</span></p> 
+            </div>   
             </div>
           </div>)}
         {characterObj.isFetchingCharcter && ( 
@@ -164,13 +180,12 @@ export default function CharactersProfile() {
             <div className={Style['episode-container']}>
               {[1, 2, 3, 4, 5, 6, 7, 8].map((_item , index) => {
                 return (
-                  <div className={Style['episode-skelton']}>
+                  <div className={Style['episode-skelton']} key={index}>
                     <Skeleton
                       sx={{ bgcolor: 'grey.900' , borderRadius : '10px' }}
                       variant="rectangular"
                       width={'100%'}
                       height={'100%'}
-                      key={index}
                     />
                   </div>
                 )

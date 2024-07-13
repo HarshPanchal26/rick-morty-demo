@@ -1,5 +1,11 @@
-import LayoutForDashboard from "../layouts/Dashboard/LayoutForDashboard"
+/**
+ * In this component we will render all our diffrent routes 
+ * with their respective layouts  
+ * 
+ * @returns 
+ */
 
+import LayoutForDashboard from "../layouts/Dashboard/LayoutForDashboard"
 
 export default function LayoutsAndRoutes() {
 
@@ -8,7 +14,6 @@ export default function LayoutsAndRoutes() {
             {/* Layout For Dahboard With it's Routes */}
                 <LayoutForDashboard/>
 
-            {/*  Accodingly we can add other layouts with their routes in this file . */}
         </>
     )
 }

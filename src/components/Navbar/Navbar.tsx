@@ -1,4 +1,6 @@
-import React from 'react'
+/**
+ * Basic Navbar component for Dashboard layout.
+ */
 import Style from './navbar.module.css'
 
 export default function Navbar() {

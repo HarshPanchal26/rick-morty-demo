@@ -1,3 +1,7 @@
+/**
+ * Class structure of Axios library for batter access in api callls.
+ */
+
 import axios from "axios";
 import { AxiosResponse, AxiosInstance, AxiosRequestConfig } from 'axios'
 // import { environment } from '../../environments/environment';

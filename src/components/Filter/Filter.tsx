@@ -1,3 +1,7 @@
+/**
+ * Filter Component which will be fetured in a page which List Characters
+ */
+
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Menu, { MenuProps } from '@mui/material/Menu';
@@ -138,7 +142,7 @@ export default function Filter() {
             species: speciesFilter ? speciesFilter : null,
             type: typeFilter ? typeFilter : null,
         });
-    }, [])
+    }, [searchParams])
 
     return (
         <div className={Style['fiter-container']}>

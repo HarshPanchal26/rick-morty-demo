@@ -1,3 +1,7 @@
+/**
+ * Services related to Character profile.
+ */
+
 import ApiService from "./ApiService";
 import { TypeCharacters, TypeEpisodMetaForCharacters, TypeLocationMeta } from "../utils/type";
 import { ServiceForCustomize } from "./ServiceForCustomize";
@@ -6,6 +10,11 @@ export class ServicesForProfile {
 
     private static StoreForProfiles: Array<TypeCharacters> | null = null;
 
+
+    /**
+     * Service for get charcter profile , Will check from
+     * local storage as well to reduce api calls.
+     */
     public static async getProfile(charId: number): Promise<TypeCharacters> {
         if (this.StoreForProfiles) {
             const charactersFromLocal: TypeCharacters | null =
@@ -20,6 +29,11 @@ export class ServicesForProfile {
         }
     }
 
+    /**
+     * 
+     * @param charId character's unique id.
+     * @returns returns fetched character with customized type.
+     */
     public static async fetchProfile(charId: number): Promise<TypeCharacters> {
         try {
             const res = await ApiService.get(`https://rickandmortyapi.com/api/character/${charId}`);
@@ -30,6 +44,12 @@ export class ServicesForProfile {
         }
     }
 
+    /**
+     * 
+     * @param locationStr location str/URL
+     * @param charId charcter's ID 
+     * @returns returns character's location
+     */
     public static async fetchLocation(locationStr: string, charId: number): Promise<TypeLocationMeta> {
         try {
             const res = await ApiService.get(locationStr);
@@ -56,6 +76,12 @@ export class ServicesForProfile {
         }
     }
 
+    /**
+     * 
+     * @param episodes Array of episode's string/URL
+     * @param charId character's unique Id
+     * @returns returns formated array of episodes data in which charcter been fetaured. 
+     */
     public static async fetchEpisodes(episodes: Array<string>, charId: number): Promise<TypeEpisodMetaForCharacters[]> {
         const episodeDataForChar: Array<TypeEpisodMetaForCharacters> = []
         try {
@@ -67,7 +93,6 @@ export class ServicesForProfile {
                     episode: episodeData.data.episode,
                 })
             }
-            console.log("Fetched Episodes", charId, episodeDataForChar)
             let newStoreForProfiles: Array<TypeCharacters> | null = null
             if (this.StoreForProfiles)
                 newStoreForProfiles = this.StoreForProfiles.map((item) => {
@@ -84,7 +109,5 @@ export class ServicesForProfile {
             return Promise.reject(error);
         }
     }
-
-
 
 }

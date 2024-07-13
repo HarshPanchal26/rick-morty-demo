@@ -1,3 +1,7 @@
+/**
+ * Service class for customize(as per our comfort)  charcter's data provided by api.
+ */
+
 import { TypeCharacters, TypeofCharListForDashboard } from "../utils/type";
 
 export class ServiceForCustomize{
