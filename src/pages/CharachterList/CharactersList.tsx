@@ -143,7 +143,7 @@ export default function CharactersList() {
 
     /**  Set Pagination State when page get refresh */
     if (currentPageInUrl) setcurrentPage(parseInt(currentPageInUrl));
-  }, [searchParams ])
+  }, [searchParams])
 
 
   return (

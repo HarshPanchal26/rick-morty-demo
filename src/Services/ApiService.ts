@@ -18,7 +18,7 @@ class ApiService {
      */
     public static axiosInstance: AxiosInstance
     public static cancelTokens: unknown[] = []
-    private static access_token: string | null
+    // private static access_token: string | null
 
     /**
     * @description initialize vue axios
