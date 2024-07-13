@@ -1,0 +1,46 @@
+.main{
+    padding: 0;
+    margin: -8px;
+    background-color:  rgb(39, 43, 51);
+    min-height: 100vh;
+    height: auto;
+}
+
+.route-container{
+    padding: 0.8rem;
+    margin: 0;
+    height: auto;   
+}
+
+/* Small Mobile (up to 480px) */
+@media only screen and (max-width: 480px) {
+    /* Your styles for small mobile devices */
+    .route-container{
+        padding: 0.1rem;
+    }
+  }
+  
+  /* Mobile (481px to 767px) */
+  @media only screen and (min-width: 481px) and (max-width: 767px) {
+    /* Your styles for mobile devices */
+    .route-container{
+        padding: 0.1rem;
+    }
+  }
+  
+  /* Tablet Portrait (768px to 1024px) */
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Your styles for tablets in portrait mode */
+    .route-container{
+        padding: 0.1rem;
+    }
+  }
+  
+  /* Tablet Landscape (1025px to 1200px) */
+  @media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    /* Your styles for tablets in landscape mode */
+    .route-container{
+        padding: 0.1rem;
+    }
+  }
+  

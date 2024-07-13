@@ -1,0 +1,122 @@
+.fiter-container{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding: 0.1rem;
+    width: 100%;
+}
+.fiter-box{
+    background-color: black;
+    border-radius: 10px;
+    border: 1px solid white;      
+    padding: 0.6rem 0.8rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.1rem;
+    cursor: pointer;
+    color: white;
+}
+
+.filter{
+    background-color: whitesmoke;
+}
+
+
+.inner-text{
+    margin: 0;
+}
+
+.text-white{
+    color: white;
+}
+
+.filter-icon{
+    padding: 0.6rem;
+    background-color: black;   
+    color: white;
+    border-radius: 10px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    border: 1px solid white;      
+}
+
+.remov-filter-icon{
+    padding: 0.6rem;
+    color: red;
+    border-radius: 10px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    border: 1px solid white;      
+    margin-right: 0px;
+    cursor: pointer;
+}
+
+
+/* Small Mobile (up to 480px) */
+@media only screen and (max-width: 480px) {
+    /* Your styles for small mobile devices */
+    .fiter-container{
+        border-radius: 10px;
+        gap: 3px;
+        padding: 0.1rem;
+        width: 100%;
+        font-size: xx-small;
+        justify-content: center;
+        /* flex-wrap: wrap; */
+    }
+    .fiter-box{
+        border-radius: 10px;
+        border: 1px solid white;      
+        padding: 0.6rem 0.6rem;
+        gap: 0.1rem;
+        cursor: pointer;
+        color: white;
+    }
+    /* .remov-filter-icon{
+        padding: 0.6rem;
+        color: red;
+        border-radius: 10px;
+        margin-right: 0px;
+        cursor: pointer;
+    } */
+  }
+  
+  /* Mobile (481px to 767px) */
+  @media only screen and (min-width: 481px) and (max-width: 767px) {
+    /* Your styles for mobile devices */
+    .fiter-container{
+        border-radius: 10px;
+        gap: 3px;
+        padding: 0.1rem;
+        width: 100%;
+        font-size: small;
+        justify-content: center;
+        /* flex-wrap: wrap; */
+        flex-grow: 1;
+    }
+    .fiter-box{
+        border-radius: 10px;
+        border: 1px solid white;      
+        padding: 0.6rem 0.6rem;
+        gap: 0.1rem;
+        cursor: pointer;
+        color: white;
+    }
+  }
+  
+  /* Tablet Portrait (768px to 1024px) */
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Your styles for tablets in portrait mode */
+    .nav-tab-container{
+        flex-direction: column;
+    }
+  }
+  
+  /* Tablet Landscape (1025px to 1200px) */
+  @media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    /* Your styles for tablets in landscape mode */
+    
+  }

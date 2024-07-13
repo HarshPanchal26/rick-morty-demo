@@ -1,0 +1,203 @@
+.list{
+    margin-top: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pagination-container{
+    margin-top: 20px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.text-white{   
+    color: white;
+}
+
+.nav-tab {
+    border-radius: 10px;
+    padding: 0.4rem;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(60, 62, 68);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-bottom: 30px;
+    z-index: 50; /* Adjust the z-index value as needed */
+}
+
+.nav-tab-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.filters-container{
+    width: 70%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.searchbar-container{
+    width: 30%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+
+.serch-icon{
+    padding: 0.1rem;
+    cursor: pointer;
+    color: white;
+    margin: auto 0px;
+}
+
+.input-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem 0 1rem;
+    border-radius: 0.4rem;
+    box-sizing: border-box;
+    border : 1px solid white;
+    background-color: black;
+    
+}
+
+.input{
+    padding: 0.8rem;
+    background-color: black;
+    width: 100%;
+    color: white;
+    border: 0px solid black;   
+    outline: none;
+}
+
+.icon{
+    background-color: black;
+    color: white;
+}
+
+.form{
+    padding: 0.3rem;
+    border-radius: 10px;
+}
+.inner-text{
+    margin: 0;
+}
+
+.charcter-skelton{
+    height: 300px;
+    width: 40%;
+}
+
+
+
+/* Small Mobile (up to 480px) */
+@media only screen and (max-width: 480px) {
+    /* Your styles for small mobile devices */
+    .nav-tab-container{
+        flex-direction: column;
+    }
+    .filters-container{
+        width: 100%;
+        padding: 0.1rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+    .searchbar-container{
+        width: 100%;
+        padding: 0.2rem;
+        gap: 2px;
+        justify-content: center;
+    }
+    .input{
+        padding: 0.6rem;
+    }
+    .list{
+        margin-top: 5px;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .charcter-skelton{
+        height: 300px;
+        width: 100%;
+    }
+  }
+  
+  /* Mobile (481px to 767px) */
+  @media only screen and (min-width: 481px) and (max-width: 767px) {
+    /* Your styles for mobile devices */
+    .nav-tab-container{
+        flex-direction: column;
+    }
+    .filters-container{
+        width: 100%;
+        padding: 0.1rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+    .searchbar-container{
+        width: 100%;
+        padding: 0.2rem;
+        gap: 2px;
+        justify-content: center;
+    }
+    .input{
+        padding: 0.7rem;
+    }
+    .charcter-skelton{
+        height: 300px;
+        width: 100%;
+    }
+  }
+  
+  /* Tablet Portrait (768px to 1024px) */
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Your styles for tablets in portrait mode */
+    .nav-tab-container{
+        flex-direction: column;
+    }
+    .filters-container{
+        width: 100%;
+        padding: 0.1rem;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px;
+        justify-content: center;
+    }
+    .searchbar-container{
+        width: 100%;
+        padding: 0.2rem;
+        gap: 2px;
+        justify-content: center;
+    }
+    .input{
+        padding: 0.7rem;
+    }
+  }
+  
+  /* Tablet Landscape (1025px to 1200px) */
+  @media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    /* Your styles for tablets in landscape mode */
+    
+  }

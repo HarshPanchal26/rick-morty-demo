@@ -1,0 +1,83 @@
+.card{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    width: 40%;
+    background-color:rgb(60, 62, 68);
+    /* border: 1px solid black; */
+    min-height: 300px;
+}
+
+.profile{
+    width: 50%;
+}
+
+.info{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    align-items: start;
+    padding: 1rem;
+    border-radius: 10px;
+    justify-items: left;
+    color: white;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.text-smaller{
+    margin: 0; 
+    font-size: smaller;
+    color: rgb(99, 94, 94);
+    color: white;
+}
+
+.text-larger{
+    margin: 0;
+    font-size: larger;
+}
+
+.text-medium{
+    margin: 0;
+    font-size: medium;
+}
+
+/* Small Mobile (up to 480px) */
+@media only screen and (max-width: 480px) {
+    /* Your styles for small mobile devices */
+    .card{
+        border-radius: 10px;
+        gap: 2px;
+        width: 100%;
+        min-height: 200px;
+    }
+  }
+  
+  /* Mobile (481px to 767px) */
+  @media only screen and (min-width: 481px) and (max-width: 767px) {
+    /* Your styles for mobile devices */
+    .card{
+        border-radius: 10px;
+        gap: 2px;
+        width: 100%;
+        min-height: 100px;
+    }
+  }
+  
+  /* Tablet Portrait (768px to 1024px) */
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Your styles for tablets in portrait mode */
+    .card{
+        border-radius: 10px;
+        gap: 2px;
+        width: 43%;
+        min-height: 200px;
+    }
+  }
+  
