@@ -32,7 +32,7 @@ Make sure you have the following installed on your machine:
     Using npm:
 
     ```bash
-    npm install
+    npm install --force
     ```
 
 ### Development
