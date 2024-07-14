@@ -164,12 +164,12 @@
     }
     
     .text-larger{
-        font-size: large;
+        font-size: small;
         margin: 0;
     }
     
     .text-medium{
-        font-size: smaller;
+        font-size: x-small;
         margin: 0;
     }
     
@@ -257,6 +257,11 @@
         font-size: x-small;
         margin: 0;
         color: white;
+    }
+    .text-larger{
+        margin: 0;
+        font-size: x-small;
+        color: wheat;
     }
     .episode-container{
         padding: 0.5rem;

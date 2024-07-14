@@ -65,15 +65,22 @@
         width: 100%;
         font-size: xx-small;
         justify-content: center;
-        /* flex-wrap: wrap; */
+        flex-wrap: wrap;
     }
     .fiter-box{
         border-radius: 10px;
         border: 1px solid white;      
-        padding: 0.6rem 0.6rem;
+        padding: 0.3rem 0.3rem;
         gap: 0.1rem;
         cursor: pointer;
         color: white;
+        align-items: center;
+    }
+    .remov-filter-icon{
+        padding: 0.3rem 0.3rem;
+    }
+    .filter-icon{
+        padding: 0.3rem 0.3rem;
     }
     /* .remov-filter-icon{
         padding: 0.6rem;
@@ -94,7 +101,7 @@
         width: 100%;
         font-size: small;
         justify-content: center;
-        /* flex-wrap: wrap; */
+        flex-wrap: wrap;
         flex-grow: 1;
     }
     .fiter-box{

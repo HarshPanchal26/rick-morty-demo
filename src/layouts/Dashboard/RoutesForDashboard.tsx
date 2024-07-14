@@ -6,7 +6,7 @@
 import { Suspense } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import CharactersList from '../../pages/CharachterList/CharactersList';
-import CharactersProfile from '../../pages/Profile/CharactersProfile';
+import CharactersProfile from '../../pages/CharProfile/CharactersProfile';
 
 
 export default function RoutesForDashboard() {
